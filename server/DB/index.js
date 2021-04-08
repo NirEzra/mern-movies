@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-mongoose.connect("mongodb://127.0.0.1:27017/cinema", {
+const dbConnection="mongodb+srv://nir:N!r123456***@cluster0.s1gso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+mongoose.connect(dbConnection, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
