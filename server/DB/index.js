@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
-const dbConnection="mongodb+srv://nir:N!r123456***@cluster0.s1gso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-mongoose.connect(dbConnection, {
+const DBConnectionString=process.env.DB;
+mongoose.connect(DBConnectionString, {
+
     useNewUrlParser: true,
     useUnifiedTopology: true,
+
   })
+
   .catch((e) => {
     console.error("Connection error", e.message);
   });
