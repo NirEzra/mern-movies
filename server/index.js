@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
 const app = express();
-//imoort the connection
+//import the connection
 const db = require("./DB");
 //import router module
 const moviesRouter = require('./routes/movie-router');
