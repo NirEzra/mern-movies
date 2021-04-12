@@ -1,4 +1,5 @@
-const API='http://localhost:8080/movies/'
+ let PORT= process.env.PORT||8080;
+ const API=`http://localhost:${PORT}/movies/`
 
 // @returns {data:movies array , success:bool}
 
