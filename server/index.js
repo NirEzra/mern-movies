@@ -20,17 +20,6 @@ app.use(cors());
 const path = require('path'); 
 
 
-
-
-
-
-db.on('error', (err)=>{console.log(err)})
-app.listen(PORT, () => {
-  console.log(`MERN app is connected to serve on server on port: ${PORT}`);
-});
-
-
-
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static(path.join(__dirname, '../client/build')));
@@ -39,8 +28,13 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
     });
 }
+// *************************************************************************************
 
 
+db.on('error', (err)=>{console.log(err)})
+app.listen(PORT, () => {
+  console.log(`MERN app is connected to serve on server on port: ${PORT}`);
+});
 
 
 app.use('/movies', moviesRouter)

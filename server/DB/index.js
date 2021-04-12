@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const DBConnectionString=process.env.DB;
-mongoose.connect(DBConnectionString, {
-
+mongoose.connect(DBConnectionString,   //creating the connection to cinema db
+  {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 
@@ -13,4 +13,4 @@ mongoose.connect(DBConnectionString, {
 
 const db = mongoose.connection;
 
-module.exports = db;
+module.exports = db; //exporting the connection
