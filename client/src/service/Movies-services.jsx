@@ -1,5 +1,5 @@
  let PORT= process.env.PORT||8080;
- const API= proces.env.NODE_ENV==='production' ? `http://localhost:${PORT}` : 'https://mern-movies-app-new.herokuapp.com/'
+ const API= process.env.NODE_ENV==='production' ? `http://localhost:${PORT}` : 'https://mern-movies-app-new.herokuapp.com/'
 
 // @returns {data:movies array , success:bool}
 
