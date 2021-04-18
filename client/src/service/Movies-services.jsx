@@ -1,11 +1,11 @@
  let PORT= process.env.PORT||8080;
- const API=`http://localhost:${PORT}/movies/`
+ const API= proces.env.NODE_ENV==='production' ? `http://localhost:${PORT}` : 'https://mern-movies-app-new.herokuapp.com/'
 
 // @returns {data:movies array , success:bool}
 
 export default async function getAllMovies(){
     try{
-        return await fetch (API + 'all')
+        return await fetch(API + 'all')
         .then ((res)=>{return res.json()})
         .then (results => {return results.data})
     }catch (error){
